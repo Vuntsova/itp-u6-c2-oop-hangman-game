@@ -6,6 +6,9 @@ class GuessAttempt(object):
         self.letter = letter
         self.hit = hit
         self.miss = miss
+        
+        if self.hit == True and self.miss == True:
+            raise InvalidGuessAttempt()
 
 
     def is_hit(self):
